@@ -4,13 +4,22 @@ Shoutcast Info and Listeners for NodeJS
 
 ## Table of Contents
 
+  - [Installing](#installing)
   - [How to Add Library](#example)
   - [Parameters](#parameters)
   - [Usage](#usage)
   - [Result From Function](#result)
   - [Roadmap](#roadmap)
-  - [Installing](#installing)
   - [License](#license)
+
+
+## Installing
+
+Using npm:
+
+```bash
+$ npm install shoutcastinfo
+```
 
 ## Example
 
@@ -96,14 +105,6 @@ shoutcastInfo({
 
 - Shoutcast v1 support
 - Current Listeners by IP support
-
-## Installing
-
-Using npm:
-
-```bash
-$ npm install shoutcastinfo
-```
 
 ## License
 
