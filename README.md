@@ -55,7 +55,7 @@ const shoutcastInfo = require('shoutcastinfo');
 
 ```
 
-## Usage
+## Usage for StreamInfo
 
 ```js
 
@@ -72,17 +72,21 @@ shoutcastInfo({
 }).then(function (result)
 {
 	console.log(result);
+	
+	/*
+	  Examples
+	  console.log(result.SongTitle);
+	  console.log(result.Bitrate);
+	*/
+	
 }).catch(function (err)
 {
 	console.log(err);
 });
       
-      
 
-```
-## Result
-
-```js
+/*
+Results for Stream Info
 {
   CurrentListeners: '0',
   PeakListeners: '0',
@@ -99,6 +103,83 @@ shoutcastInfo({
   Content: 'audio/mpeg',
   Version: '2.5.5.733 (posix(linux x64))'
 }
+*/
+```
+
+## Usage for Listeners Info
+
+```js
+
+shoutcastInfo({
+	ip: '192.168.1.1',
+	port: '1234',
+	password: '123456789',
+	timeout: 2000,
+	type: 2,
+	sid: 1,
+	op: 'listeners',
+}).then(function (result)
+{
+	console.log(result);
+	
+	/*
+	  Examples
+	  console.log(result[0].HOSTNAME[0]._text[0]);
+	*/
+}).catch(function (err)
+{
+	console.log(err);
+});
+     
+			
+/*
+Results for Listeners Info as Array
+
+[
+  [
+    {
+      HOSTNAME: [ { _text: [ '123.123.123.123' ] } ],
+      USERAGENT: [
+        {
+          _text: [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64)6'
+          ]
+        }
+      ],
+      CONNECTTIME: [ { _text: [ '1138' ] } ],
+      UID: [ { _text: [ '41' ] } ],
+      TYPE: [ { _text: [ '33556480' ] } ],
+      REFERER: [ { _text: [ 'http://ip:port:etc/index.html?sid=1' ] } ],
+      XFF: [ {} ],
+      GRID: [ { _text: [ '41' ] } ],
+      TRIGGERS: [ { _text: [ '0' ] } ]
+    },
+    {
+      HOSTNAME: [ { _text: [ '3.4.5.6' ] } ],
+      USERAGENT: [
+        {
+          _text: [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+          ]
+        }
+      ],
+      CONNECTTIME: [ { _text: [ '3' ] } ],
+      UID: [ { _text: [ '42' ] } ],
+      TYPE: [ { _text: [ '33556480' ] } ],
+      REFERER: [
+        {
+          _text: [
+            'http://ip:port:etc8/admin.cgi?sid=1&page=1'
+          ]
+        }
+      ],
+      XFF: [ {} ],
+      GRID: [ { _text: [ '42' ] } ],
+      TRIGGERS: [ { _text: [ '0' ] } ]
+    }
+  ]
+]
+*/
 ```
 
 ## Roadmap
