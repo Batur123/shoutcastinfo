@@ -7,7 +7,7 @@ Shoutcast Info and Listeners for NodeJS
   - [Installing](#installing)
   - [How to Add Library](#example)
   - [Parameters](#parameters)
-  - [Usage](#usage)
+  - [Usage](#usage for streaminfo)
   - [Result From Function](#result)
   - [Roadmap](#roadmap)
   - [License](#license)
