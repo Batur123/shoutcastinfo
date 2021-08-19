@@ -1,6 +1,10 @@
 const axios = require('axios');
 var xmljs = require('xml-js');
 const xmljsoptions = {ignoreComment: true, alwaysChildren: true, compact: true};
+const xmljsoptionswitharray = {ignoreComment: true, alwaysChildren: true, compact: true, trim: true, normalize: true, alwaysArray: true};
+
+// Experimental
+// const XHeaders = { timeout: timeout, 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040614 Firefox/0.8'};
 
 /*
  * @param url
@@ -15,20 +19,32 @@ function ShoutcastV2(ip,port,password,timeout,sid,op)
 {
     var WholeURL = "";
     const SHeaders =  { timeout: timeout };
+
     switch(op)
     {
         //Experimental
         case 'listeners':
         {
-           // WholeURL = 'http://'+ip+':'+port+'/admin.cgi?pass='+password+'&sid='+sid+'&mode=viewxml&page=3';
-            break;
+            WholeURL = 'http://'+ip+':'+port+'/admin.cgi?pass='+password+'&sid='+sid+'&mode=viewxml&page=3';
+            return axios.get(WholeURL,SHeaders)
+                .then(response =>
+                {
+                    let result = xmljs.xml2js(response.data, xmljsoptionswitharray);
+
+                    return [
+                        typeof result.SHOUTCASTSERVER[0].LISTENERS[0].LISTENER == 'undefined' ? "No Listener" : result.SHOUTCASTSERVER[0].LISTENERS[0].LISTENER
+                    ];
+                })
+                .catch(function(error)
+                {
+                    return error;
+                });
         }
 
         case 'streaminfo':
         {
             WholeURL = 'http://'+ip+':'+port+'/admin.cgi?pass='+password+'&sid='+sid+'&mode=viewxml&page=1';
-
-           return axios.get(WholeURL,SHeaders)
+            return axios.get(WholeURL,SHeaders)
                 .then(response =>
                 {
                     let result = xmljs.xml2js(response.data, xmljsoptions);
@@ -52,7 +68,7 @@ function ShoutcastV2(ip,port,password,timeout,sid,op)
                 })
                 .catch(function(error)
                 {
-                   return error;
+                    return error;
                 });
         }
 
@@ -64,19 +80,6 @@ function ShoutcastV2(ip,port,password,timeout,sid,op)
 
 
 }
-
-
-
-/*
-   args.url
-   args.port
-   args.adminpass
-   args.type v1 v2
-   args.timeout
-   args.sid
-
- */
-
 
 /*
  * Song Info Main Function
@@ -92,6 +95,12 @@ function shoutcastinfo(args)
     if(typeof args.timeout == 'undefined' || !Boolean(args.timeout)) args.timeout = 2000;
     if(typeof args.op == 'undefined' || !Boolean(args.op)) throw new Error('Operation is required.');
 
+    console.log(args.ip);
+    console.log(args.port);
+    console.log(args.password);
+    console.log(args.type);
+    console.log(args.timeout);
+    console.log(args.op);
     switch (args.type)
     {
         case 1:
