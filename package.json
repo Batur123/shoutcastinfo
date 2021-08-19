@@ -1,0 +1,29 @@
+{
+  "name": "shoutcastinfo",
+  "version": "1.0.8",
+  "description": "Get Shoutcast info from V1 and V2 versions",
+  "main": "shoutcastinfo.js",
+  "scripts": {
+    "test": "None"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "xml-js": "^1.6.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Batur123/shoutcastinfo"
+  },
+  "files": [
+    "shoutcastinfo.js"
+  ],
+  "keywords": [
+    "shoutcast"
+  ],
+  "author": "Batur",
+  "license": "MIT"
+}
