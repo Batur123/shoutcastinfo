@@ -138,7 +138,7 @@ Results for Listeners Info as Array
 [
   [
     {
-      HOSTNAME: [ { _text: [ '123.123.123.123' ] } ],
+      HOSTNAME: [ { _text: [ '127.0.0.1' ] } ],
       USERAGENT: [
         {
           _text: [
@@ -155,7 +155,7 @@ Results for Listeners Info as Array
       TRIGGERS: [ { _text: [ '0' ] } ]
     },
     {
-      HOSTNAME: [ { _text: [ '3.4.5.6' ] } ],
+      HOSTNAME: [ { _text: [ '33.44.55.192' ] } ],
       USERAGENT: [
         {
           _text: [
