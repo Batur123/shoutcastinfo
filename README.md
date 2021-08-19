@@ -7,7 +7,8 @@ Shoutcast Info and Listeners for NodeJS
   - [Installing](#installing)
   - [How to Add Library](#example)
   - [Parameters](#parameters)
-  - [Usage](#usage for streaminfo)
+  - [Usage](#usage1)
+  - [Usage 2](#usage2)
   - [Result From Function](#result)
   - [Roadmap](#roadmap)
   - [License](#license)
@@ -55,7 +56,7 @@ const shoutcastInfo = require('shoutcastinfo');
 
 ```
 
-## Usage for StreamInfo
+## Usage1
 
 ```js
 
@@ -106,7 +107,7 @@ Results for Stream Info
 */
 ```
 
-## Usage for Listeners Info
+## Usage2
 
 ```js
 
