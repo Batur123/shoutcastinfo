@@ -1,4 +1,4 @@
-# shoutcastinfo (2021)
+# shoutcastinfo (2022)
 
 Shoutcast Info and Listeners for NodeJS
 
