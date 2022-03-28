@@ -55,7 +55,7 @@ const shoutcastInfo = require('shoutcastinfo');
 
 ```
 
-## Usage1
+## Example-1
 
 ```js
 
@@ -106,7 +106,7 @@ Results for Stream Info
 */
 ```
 
-## Usage2
+## Example-2
 
 ```js
 
@@ -180,6 +180,28 @@ Results for Listeners Info as Array
   ]
 ]
 */
+```
+
+## Example-3 (with await)
+
+```js
+
+const shoutcastInfo = require('shoutcastinfo.js');
+
+async function getRadioInfo() {
+    let results = await shoutcastInfo({
+        ip: '192.168.1.1',
+        port: '1234',
+        password: '123456789',
+        timeout: 2000,
+        type: 2,
+        sid: 1,
+        op: 'streaminfo',
+    });
+    
+    console.log(results);
+}
+
 ```
 
 ## Roadmap
