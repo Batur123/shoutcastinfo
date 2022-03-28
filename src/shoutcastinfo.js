@@ -1,10 +1,7 @@
 const axios = require('axios');
-var xmljs = require('xml-js');
+const xmljs = require('xml-js');
 const xmljsoptions = {ignoreComment: true, alwaysChildren: true, compact: true};
 const xmljsoptionswitharray = {ignoreComment: true, alwaysChildren: true, compact: true, trim: true, normalize: true, alwaysArray: true};
-
-// Experimental
-// const XHeaders = { timeout: timeout, 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040614 Firefox/0.8'};
 
 /*
  * @param url
@@ -70,6 +67,15 @@ function ShoutcastV2(ip,port,password,timeout,sid,op) {
     }
 }
 
+/*
+ * @param url
+ * @param port
+ * @param password
+ * @param timeout
+ * @param sid
+ * @param op
+ * @returns {PromiseLike<T> | Promise<T>}
+ */
 function ShoutcastV1(ip,port,password,timeout,sid,op) {
     var WholeURL = "";
     const SHeaders = {
