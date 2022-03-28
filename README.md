@@ -184,8 +184,6 @@ Results for Listeners Info as Array
 
 ## Roadmap
 
-~~- Shoutcast v1 support~~ <br>
-~~- Current Listeners by IP support  <br>
 - Better Error Handling
 
 ## License
