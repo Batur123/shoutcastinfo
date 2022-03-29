@@ -9,7 +9,7 @@ Shoutcast Info and Listeners for NodeJS
   - [Parameters](#parameters)
   - [Usage](#Example-1)
   - [Usage 2](#Example-2)
-  - [Usage 3](#Example-3)
+  - [Usage 3](#Example-3 (with await))
   - [Roadmap](#roadmap)
   - [License](#license)
 
