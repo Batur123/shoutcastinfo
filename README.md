@@ -1,6 +1,6 @@
 
 <div align="center">
-	# shoutcastinfo (2022)<br>
+	 ShoutcastInfo<br>
 	<p>
 		<a href="https://www.npmjs.com/package/shoutcastinfo"><img src="https://nodei.co/npm/shoutcastinfo.png?downloads=true&downloadRank=true&stars=true" alt="" /></a><br>
 		Shoutcast Info and Listeners for NodeJS
