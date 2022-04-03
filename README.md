@@ -1,6 +1,11 @@
-# shoutcastinfo (2022)
 
-Shoutcast Info and Listeners for NodeJS
+<div align="center">
+	# shoutcastinfo (2022)<br>
+	<p>
+		<a href="https://www.npmjs.com/package/shoutcastinfo"><img src="https://nodei.co/npm/shoutcastinfo.png?downloads=true&downloadRank=true&stars=true" alt="" /></a><br>
+		Shoutcast Info and Listeners for NodeJS
+</div>
+
 
 ## Table of Contents
 
