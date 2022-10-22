@@ -1,14 +1,20 @@
-# shoutcastinfo (2022)
 
-Shoutcast Info and Listeners for NodeJS
+<div align="center">
+	 ShoutcastInfo<br>
+	<p>
+		<a href="https://www.npmjs.com/package/shoutcastinfo"><img src="https://nodei.co/npm/shoutcastinfo.png?downloads=true&downloadRank=true&stars=true" alt="" /></a><br>
+		Shoutcast Info and Listeners for NodeJS
+</div>
+
 
 ## Table of Contents
 
   - [Installing](#installing)
   - [How to Add Library](#example)
   - [Parameters](#parameters)
-  - [Usage](#usage1)
-  - [Usage 2](#usage2)
+  - [Usage](#Example-1)
+  - [Usage 2](#Example-2)
+  - [Usage 3](#Example-3 (with await))
   - [Roadmap](#roadmap)
   - [License](#license)
 
