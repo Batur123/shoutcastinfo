@@ -1,6 +1,6 @@
 {
   "name": "shoutcastinfo",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Get Shoutcast info from V1 and V2 versions",
   "main": "shoutcastinfo.js",
   "scripts": {

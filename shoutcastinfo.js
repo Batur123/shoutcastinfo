@@ -25,7 +25,7 @@ function ShoutcastV2(ip,port,password,timeout,sid,op) {
                     let result = xmljs.xml2js(response.data, xmljsoptionswitharray);
 
                     return [
-                        typeof result.SHOUTCASTSERVER[0].LISTENERS[0].LISTENER == 'undefined' ? "No Listener" : result.SHOUTCASTSERVER[0].LISTENERS[0].LISTENER
+                        typeof result?.SHOUTCASTSERVER[0]?.LISTENERS[0]?.LISTENER == 'undefined' ? "No Listener" : result?.SHOUTCASTSERVER[0]?.LISTENERS[0]?.LISTENER
                     ];
                 })
                 .catch(function (error) {
@@ -39,21 +39,21 @@ function ShoutcastV2(ip,port,password,timeout,sid,op) {
                 .then(response => {
                     let result = xmljs.xml2js(response.data, xmljsoptions);
                     return {
-                        CurrentListeners: typeof result.SHOUTCASTSERVER.CURRENTLISTENERS._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.CURRENTLISTENERS._text,
-                        PeakListeners: typeof result.SHOUTCASTSERVER.PEAKLISTENERS._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.PEAKLISTENERS._text,
-                        MaxListeners: typeof result.SHOUTCASTSERVER.MAXLISTENERS._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.MAXLISTENERS._text,
-                        UniqueListeners: typeof result.SHOUTCASTSERVER.UNIQUELISTENERS._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.UNIQUELISTENERS._text,
-                        AverageTime: typeof result.SHOUTCASTSERVER.AVERAGETIME._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.AVERAGETIME._text,
-                        StreamUptime: typeof result.SHOUTCASTSERVER.STREAMUPTIME._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMUPTIME._text,
-                        ServerGenre: typeof result.SHOUTCASTSERVER.SERVERGENRE._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERGENRE._text,
-                        ServerURL: typeof result.SHOUTCASTSERVER.SERVERURL._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERURL._text,
-                        ServerTitle: typeof result.SHOUTCASTSERVER.SERVERTITLE._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERTITLE._text,
-                        SongTitle: typeof result.SHOUTCASTSERVER.SONGTITLE._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SONGTITLE._text,
-                        StreamHits: typeof result.SHOUTCASTSERVER.STREAMHITS._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMHITS._text,
-                        StreamSource: typeof result.SHOUTCASTSERVER.STREAMSOURCE._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMSOURCE._text,
-                        Bitrate: typeof result.SHOUTCASTSERVER.BITRATE._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.BITRATE._text,
-                        Content: typeof result.SHOUTCASTSERVER.CONTENT._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.CONTENT._text,
-                        Version: typeof result.SHOUTCASTSERVER.VERSION._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.VERSION._text,
+                        CurrentListeners: typeof result?.SHOUTCASTSERVER?.CURRENTLISTENERS?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.CURRENTLISTENERS._text,
+                        PeakListeners: typeof result?.SHOUTCASTSERVER?.PEAKLISTENERS?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.PEAKLISTENERS._text,
+                        MaxListeners: typeof result?.SHOUTCASTSERVER?.MAXLISTENERS?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.MAXLISTENERS._text,
+                        UniqueListeners: typeof result?.SHOUTCASTSERVER?.UNIQUELISTENERS?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.UNIQUELISTENERS._text,
+                        AverageTime: typeof result?.SHOUTCASTSERVER?.AVERAGETIME?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.AVERAGETIME._text,
+                        StreamUptime: typeof result?.SHOUTCASTSERVER?.STREAMUPTIME?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMUPTIME._text,
+                        ServerGenre: typeof result?.SHOUTCASTSERVER?.SERVERGENRE?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERGENRE._text,
+                        ServerURL: typeof result?.SHOUTCASTSERVER?.SERVERURL?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERURL._text,
+                        ServerTitle: typeof result?.SHOUTCASTSERVER?.SERVERTITLE?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SERVERTITLE._text,
+                        SongTitle: typeof result?.SHOUTCASTSERVER?.SONGTITLE?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.SONGTITLE._text,
+                        StreamHits: typeof result?.SHOUTCASTSERVER?.STREAMHITS?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMHITS._text,
+                        StreamSource: typeof result?.SHOUTCASTSERVER?.STREAMSOURCE?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.STREAMSOURCE._text,
+                        Bitrate: typeof result?.SHOUTCASTSERVER?.BITRATE?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.BITRATE._text,
+                        Content: typeof result?.SHOUTCASTSERVER?.CONTENT?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.CONTENT._text,
+                        Version: typeof result?.SHOUTCASTSERVER?.VERSION?._text == 'undefined' ? "No Info" : result.SHOUTCASTSERVER.VERSION._text,
                     }
                 })
                 .catch(function (error) {
