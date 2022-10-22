@@ -1,13 +1,14 @@
 {
   "name": "shoutcastinfo",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Get Shoutcast info from V1 and V2 versions",
   "main": "shoutcastinfo.js",
   "scripts": {
     "test": "None"
   },
   "dependencies": {
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "axios": "^0.21.4"
   },
   "devDependencies": {
     "axios": "^0.21.4",
